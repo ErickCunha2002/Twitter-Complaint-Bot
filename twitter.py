@@ -11,8 +11,8 @@ horas=hoje.hour
 
 
 # Dados de login
-email = 'erick-pirata2@hotmail.com'
-senha = 'Erick1@3$5'
+email = 'seu email'
+senha = 'sua senha'
 
 class TwitterBot():
 
@@ -45,6 +45,7 @@ class TwitterBot():
             confirmar.send_keys('@Bronzi_lucas')
         except:
             print('Não houve necessidade de confirmação.')
+        
         next_step = self.driver.find_element(By.XPATH, '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div/div/div/div')
         next_step.click() 
         
@@ -74,7 +75,7 @@ class TwitterBot():
         comentario = WebDriverWait(self.driver, 10).until(
             EC.visibility_of_element_located((By.XPATH, 
         '//*[@id="layers"]/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div/div[3]/div[2]/div[1]/div/div/div/div/div[2]/div[1]/div/div/div/div/div/div[2]/div/div/div/div/label/div[1]/div/div/div/div/div/div[2]/div')))
-        comentario.send_keys(f'Hoje, às {horas}h, minha internet está uma porcaria, Desktop internet!')        
+        comentario.send_keys(f'Hoje, às {horas}h, minha internet está extremamente lenta, [Nome da sua provedora de internet]')        
         time.sleep(2)
         
         # Envia a mensagem.
