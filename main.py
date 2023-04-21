@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from twitter import TwitterBot
 import datetime
 
-email='erick-pirata2@hotmail.com'
-senha='Erick1@3$5'
+email='seu email'
+senha='sua senha'
 
 
 class Velocidade():
@@ -25,6 +25,6 @@ internet=Velocidade()
 internet.obter_velocidade()
 
 if internet.velocidade < 500:
-    twittar=TwitterBot(email, senha)
+    twittar=TwitterBot(seu email, sua senha)
     twittar.login()
     twittar.reclamar()
